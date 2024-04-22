@@ -1,5 +1,9 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>King</title><link>https://xxjssyouk.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>King</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://xxjssyouk.github.io</link></image><lastBuildDate>Mon, 22 Apr 2024 17:22:12 +0000</lastBuildDate><managingEditor>King</managingEditor><ttl>60</ttl><webMaster>King</webMaster><item><title>single配置如何配置</title><link>https://xxjssyouk.github.io/post/single-pei-zhi-ru-he-pei-zhi.html</link><description>1、添加config配置&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>King</title><link>https://xxjssyouk.github.io</link><description>童话是一种生活态度，仅此而已。</description><copyright>King</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://xxjssyouk.github.io</link></image><lastBuildDate>Mon, 22 Apr 2024 17:34:51 +0000</lastBuildDate><managingEditor>King</managingEditor><ttl>60</ttl><webMaster>King</webMaster><item><title>这个博客开源</title><link>https://xxjssyouk.github.io/post/zhe-ge-bo-ke-kai-yuan.html</link><description>&#13;
+ 1. 纯粹的写issue&#13;
+ 2. 写完issue后添加目录到README&#13;
+ 3. 改成webhook用flask部署个callback 每次写完issue自动生成新的 README&#13;
+ 4. 最近算是学会了一些 GitHub Actions，现在只需要写 issue 打 label 就好了，其余完全不用管。</description><guid isPermaLink="true">https://xxjssyouk.github.io/post/zhe-ge-bo-ke-kai-yuan.html</guid><pubDate>Mon, 22 Apr 2024 17:34:26 +0000</pubDate></item><item><title>single配置如何配置</title><link>https://xxjssyouk.github.io/post/single-pei-zhi-ru-he-pei-zhi.html</link><description>1、添加config配置&#13;
 &#13;
  &gt; "singlePage":["about"],&#13;
 &#13;
