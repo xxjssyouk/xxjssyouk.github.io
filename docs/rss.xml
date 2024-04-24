@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Meekdai</title><link>https://134688.xyz</link><description>童话是一种生活态度，仅此而已。</description><copyright>Meekdai</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.meekdai.com/avatar.svg</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Wed, 24 Apr 2024 03:10:32 +0000</lastBuildDate><managingEditor>Meekdai</managingEditor><ttl>60</ttl><webMaster>Meekdai</webMaster><item><title> 各类电子书下载网站，仅做分享</title><link>https://134688.xyz/post/%20-ge-lei-dian-zi-shu-xia-zai-wang-zhan-%EF%BC%8C-jin-zuo-fen-xiang.html</link><description>&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>Meekdai</title><link>https://134688.xyz</link><description>童话是一种生活态度，仅此而已。</description><copyright>Meekdai</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://static.meekdai.com/avatar.svg</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Wed, 24 Apr 2024 03:52:05 +0000</lastBuildDate><managingEditor>Meekdai</managingEditor><ttl>60</ttl><webMaster>Meekdai</webMaster><item><title>电视直播源</title><link>https://134688.xyz/post/dian-shi-zhi-bo-yuan.html</link><description>电视使用就直接下载第一个（TV）最低支持安卓6 :crazy_face:&#13;
+&#13;
+第一个（TV）适用于电视端，有专门做优化，遥控器操作很方便，还可以手机扫码添加源，免除输入之苦:&#13;
+&#13;
+第二个（Player）适用于手机/iPad​&#13;
+&#13;
+其实两者区别不大，TV版没有各种统计和服务sdk，更加干净。</description><guid isPermaLink="true">https://134688.xyz/post/dian-shi-zhi-bo-yuan.html</guid><pubDate>Wed, 24 Apr 2024 03:51:41 +0000</pubDate></item><item><title> 各类电子书下载网站，仅做分享</title><link>https://134688.xyz/post/%20-ge-lei-dian-zi-shu-xia-zai-wang-zhan-%EF%BC%8C-jin-zuo-fen-xiang.html</link><description>&#13;
 [1](https://linux.do/chat).共享计划（镜像.导航站）&#13;
 -https://zlib.pro/ 87 （Zlibray助手.镜像检测.共享账号）&#13;
 -https://tool.ssdown.org/ 27 （ zhelper search 配置[小工具](https://linux.do/tag/%E5%B0%8F%E5%B7%A5%E5%85%B7)）&#13;
