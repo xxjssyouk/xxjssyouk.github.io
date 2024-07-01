@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://static.meekdai.com/favicon.svg"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -73,8 +73,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <div class="markdown-body" id="postBody"><p>谷歌的安卓系统开发经理阿里夫・迪基奇（Arif Dikici）确认，通过2024年3月的Play System更新，安卓系统已经改用VideoLAN的开源libdav1d编解码器，目的是提升对AV1编码视频的支持。自安卓10系统发布以来，安卓开源项目（AOSP）已经包含了谷歌开发的开源AV1解码器libgav1。然而，libdav1d在性能和效率方面都优于libgav1，能够更充分地利用设备的CPU资源，减少带宽消耗，同时优化视频播放体验。</p>
 <p>谷歌表示，大多数安卓手机都能够通过libdav1d解码720p30的视频。迪基奇还提到，谷歌计划很快将libdav1d设为Android系统的默认编解码器。与libgav1相比，libdav1d在CPU上的运行效率更高，即使是低端设备也能流畅播放高质量的AV1视频，且不会过度消耗电量。例如，在不支持硬件加速AV1解码的Google Pixel 3 XL手机上，使用libdav1d解码4K60分辨率的视频时，平均帧率可达50fps，而使用libgav1则不到10fps。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章随意！❤️</div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://134688.xyz"> Meekdai </a>
 <p>
@@ -129,6 +131,8 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
 
 function openComments(){
     cm=document.getElementById("comments");

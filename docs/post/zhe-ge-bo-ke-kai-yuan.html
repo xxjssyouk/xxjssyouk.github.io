@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://static.meekdai.com/favicon.svg"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -104,8 +104,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 </ol>
 <p>需要把 env 中的 name 和 email 改成自己的 <a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/15976103/98512693-afd54200-22a1-11eb-9645-d0784b8c8ed3.png"><img src="https://user-images.githubusercontent.com/15976103/98512693-afd54200-22a1-11eb-9645-d0784b8c8ed3.png" alt="image" style="max-width: 100%;"></a></p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章随意！❤️</div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://134688.xyz"> Meekdai </a>
 <p>
@@ -160,6 +162,8 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
 
 function openComments(){
     cm=document.getElementById("comments");

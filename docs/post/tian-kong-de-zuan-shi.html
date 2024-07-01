@@ -4,7 +4,7 @@
     <meta content="text/html; charset=utf-8" http-equiv="content-type" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link href="//cdn.staticfile.net/Primer/21.0.7/primer.css" rel="stylesheet" />
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
     <link rel="icon" href="https://static.meekdai.com/favicon.svg"><script>
         let theme = localStorage.getItem("meek_theme") || "light";
         document.documentElement.setAttribute("data-color-mode", theme);
@@ -83,8 +83,10 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>这些持续极短暂的天体珍宝，分别出现在日全食阶段即将开始之前和刚结束之后。它们出现的时间点，在日盘刚好消失于新月剪影的后方，仅留下月盘剪影边缘的一圈银白和亮斑，造就了闪亮钻石镶在黝黑指环上的景观。</p>
 <p>这幅摄于阿肯色州中北部的戏剧性缩时影像序列，记录了出现在此次日全食前后的2个钻石环景观，以及日全食阶段空灵优美的日冕。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章随意！❤️</div>
+
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
+
 </div>
     <div id="footer">Copyright © <span id="year"></span><a href="https://134688.xyz"> Meekdai </a>
 <p>
@@ -139,6 +141,8 @@ console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n\n","padding:5p
 <script>
 document.getElementById("pathHome").setAttribute("d",IconList["home"]);
 document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
 
 function openComments(){
     cm=document.getElementById("comments");
