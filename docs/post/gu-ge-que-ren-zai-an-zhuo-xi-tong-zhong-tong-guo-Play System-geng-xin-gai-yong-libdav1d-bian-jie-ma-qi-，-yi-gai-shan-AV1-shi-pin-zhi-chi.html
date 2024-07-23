@@ -42,7 +42,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     .postTitle{font-size:24px;}
 }
 </style>
-
+<style>#postBody{font-size:20px}</style>
 
 
 
@@ -74,13 +74,13 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div class="markdown-body" id="postBody"><p>谷歌的安卓系统开发经理阿里夫・迪基奇（Arif Dikici）确认，通过2024年3月的Play System更新，安卓系统已经改用VideoLAN的开源libdav1d编解码器，目的是提升对AV1编码视频的支持。自安卓10系统发布以来，安卓开源项目（AOSP）已经包含了谷歌开发的开源AV1解码器libgav1。然而，libdav1d在性能和效率方面都优于libgav1，能够更充分地利用设备的CPU资源，减少带宽消耗，同时优化视频播放体验。</p>
 <p>谷歌表示，大多数安卓手机都能够通过libdav1d解码720p30的视频。迪基奇还提到，谷歌计划很快将libdav1d设为Android系统的默认编解码器。与libgav1相比，libdav1d在CPU上的运行效率更高，即使是低端设备也能流畅播放高质量的AV1视频，且不会过度消耗电量。例如，在不支持硬件加速AV1解码的Google Pixel 3 XL手机上，使用libdav1d解码4K60分辨率的视频时，平均帧率可达50fps，而使用libgav1则不到10fps。</p></div>
-<div style="font-size:small;margin-top:8px;float:right;">❤️ 转载文章随意！❤️</div>
+<div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
 
 </div>
-    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://134688.xyz">Meekdai</a></div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://134688.xyz">记录、活着、回忆</a></div>
 <div id="footer2">
     <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
 </div>
@@ -171,6 +171,6 @@ function iFrameLoading(){
     }
 }
 </script>
-
+<script async src='//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js'></script>
 
 </html>
