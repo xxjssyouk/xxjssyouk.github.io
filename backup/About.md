@@ -4,3 +4,4 @@
 
 那么超越了生死，超脱了天地，在光阴之外，等待我们的是什么？
 
+![](https://pic.imgdb.cn/item/669fba7ad9c307b7e9288e8a.jpg)
