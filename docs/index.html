@@ -29,7 +29,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <style>
 .avatar {transition: 0.8s;width:64px;height:64px;object-fit: cover;}
 .avatar:hover{transform: scale(1.15) rotate(360deg);}
-#header h1 a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-family:Monaco;margin-left:8px;}
+.title-left a{color:inherit;text-decoration:none;vertical-align: bottom;font-size:40px;font-weight: bold;font-family:Monaco;margin-left:8px;}
 .title-right{display:flex;margin:auto 0 0 auto;}
 .title-right button{margin-right:8px;padding:16px;}
 .title-right .circle{padding: 14px 16px;}
@@ -55,8 +55,8 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 
 <body>
     <div id="header">
-<h1>
-    <img src="https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">记录、回忆</a></h1>
+<div class="title-left">
+    <img src="https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png" class="avatar circle" id="avatarImg" alt="avatar"><a class="blogTitle">记录、回忆</a></div>
 <div class="title-right">
     <a href="https://134688.xyz/tag.html" id="buttonSearch" class="btn btn-invisible circle" title="搜索">
         <svg class="octicon" width="16" height="16" >
@@ -92,7 +92,18 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
     <div id="content">
 <div style="margin-bottom: 16px;">童话是一种生活态度，仅此而已。</div>
 <nav class="SideNav border">
-<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/iPhone%20-de-shi-ti-jian-pan.html">
+<a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/neng-bu-neng-shi-yong-bing-kuai-%EF%BC%8C-zao-yi-sao-hang-kong-mu-jian-%EF%BC%9F.html">
+    <div class="d-flex flex-items-center">
+        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
+        </svg>
+        <span class="listTitle">能不能使用冰块，造一艘航空母舰？</span>
+    </div>
+    <div class="listLabels">
+        
+        <span class="Label LabelName" style="background-color:#008672"><object><a style="color:#fff" href="tag.html#收藏">收藏</a></object></span><span class="Label LabelName" style="background-color:#B60205"><object><a style="color:#fff" href="tag.html#存档">存档</a></object></span>
+        <span class="Label LabelTime" style="background-color:#bc4c00">2024-08-16</span>
+    </div>
+</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/iPhone%20-de-shi-ti-jian-pan.html">
     <div class="d-flex flex-items-center">
         <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
         </svg>
@@ -245,17 +256,6 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
         
         <span class="Label LabelName" style="background-color:#B60205"><object><a style="color:#fff" href="tag.html#存档">存档</a></object></span>
         <span class="Label LabelTime" style="background-color:#bc4c00">2024-07-08</span>
-    </div>
-</a><a class="SideNav-item d-flex flex-items-center flex-justify-between" href="post/ma-si-ke-cheng-xing-jian-4-zhou-nei-jiang-zai-ci-shi-fei.html">
-    <div class="d-flex flex-items-center">
-        <svg class="SideNav-icon octicon" style="witdh:16px;height:16px"><path class="svgTop0" d=""></path>
-        </svg>
-        <span class="listTitle">马斯克称星舰4周内将再次试飞</span>
-    </div>
-    <div class="listLabels">
-        
-        <span class="Label LabelName" style="background-color:#FBCA04"><object><a style="color:#fff" href="tag.html#日常">日常</a></object></span>
-        <span class="Label LabelTime" style="background-color:#bc4c00">2024-07-07</span>
     </div>
 </a>
 </nav><nav class="paginate-container" aria-label="Pagination">
