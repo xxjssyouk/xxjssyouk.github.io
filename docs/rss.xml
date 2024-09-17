@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>童话是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Sun, 15 Sep 2024 03:42:04 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>观看 YouTube ，梦回电视时代</title><link>https://134688.xyz/post/68.html</link><description>![](https://pic.superbed.cc/item/66e6571d4f81018260f2591b.jpg)&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>童话是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Tue, 17 Sep 2024 12:53:51 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>Qwen2-VL微调工具</title><link>https://134688.xyz/post/69.html</link><description>Qwen2-VL微调工具：&#13;
+&#13;
+![](https://pic.superbed.cc/item/66e97ba42e3b94edab2c1b56.jpg)&#13;
+&#13;
+&#13;
+用于微调开源多模态大模型Qwen2-VL，支持单GPU和多GPU训练，提供简易上手的微调脚本和数据，旨在帮助开发者快速进行模型微调或再训练&#13;
+&#13;
+[Fine-tuning Qwen2-VL-2B](https://github.com/zhangfaen/finetune-Qwen2-VL) 。</description><guid isPermaLink="true">https://134688.xyz/post/69.html</guid><pubDate>Tue, 17 Sep 2024 12:53:28 +0000</pubDate></item><item><title>观看 YouTube ，梦回电视时代</title><link>https://134688.xyz/post/68.html</link><description>![](https://pic.superbed.cc/item/66e6571d4f81018260f2591b.jpg)&#13;
 &#13;
 📺 [YTCH - 像看电视一样刷 YouTube](https://www.ytch.xyz/)&#13;
 &#13;
