@@ -1,5 +1,12 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>童话是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Mon, 23 Sep 2024 14:41:14 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title> XHS-Downloader</title><link>https://134688.xyz/post/75.html</link><description>https://github.com/JoeanAmier/XHS-Downloader&#13;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>童话是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Tue, 24 Sep 2024 06:41:05 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>Cloudflare WARP 原地复活</title><link>https://134688.xyz/post/76.html</link><description>☁️ [Cloudflare WARP 原地复活！](https://one.one.one.one/)&#13;
+&#13;
+![](https://pic.superbed.cc/item/66f25edd991d0115df7872a4.jpg)&#13;
+&#13;
+&#13;
+近日，CloudFlare WARP 客户端更新后带来了 [MASQUE](https://blog.cloudflare.com/zero-trust-warp-with-a-masque/) 协议支持，使 WARP 的流量看起来像 HTTPS，以避免被防火墙检测和阻止&#13;
+&#13;
+图示以安卓为例，Play 加入内测后下载，Tunnel protocol 选择 MASQUE。</description><guid isPermaLink="true">https://134688.xyz/post/76.html</guid><pubDate>Tue, 24 Sep 2024 06:40:44 +0000</pubDate></item><item><title> XHS-Downloader</title><link>https://134688.xyz/post/75.html</link><description>https://github.com/JoeanAmier/XHS-Downloader&#13;
 &#13;
 小红书图文/视频采集工具。</description><guid isPermaLink="true">https://134688.xyz/post/75.html</guid><pubDate>Mon, 23 Sep 2024 14:40:48 +0000</pubDate></item><item><title>AdsDog – 数字人营销工具</title><link>https://134688.xyz/post/74.html</link><description>AdsDog 是一个专注于数字人营销的工具，只需提供产品链接或上传相关描述和图片，即可自动生成吸引人的营销视频。</description><guid isPermaLink="true">https://134688.xyz/post/74.html</guid><pubDate>Sun, 22 Sep 2024 14:25:00 +0000</pubDate></item><item><title>微信 iOS 端 8.0.52 正式版更新</title><link>https://134688.xyz/post/73.html</link><description>![](https://pic.superbed.cc/item/66ee2d1e2e3b94edabec3d78.jpg)&#13;
 &#13;
