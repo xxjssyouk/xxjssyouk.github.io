@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    
+    <link rel="icon" href="https://static.meekdai.com/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="[https://zongru666.github.io/myIPTV/](https://zongru666.github.io/myIPTV/)
+
+# TVBox自用影视源与iptv源  
+自用，侵删  
+
+## Contents
+- [TVbox安装包（安卓apk）](#安装包)
+- [影视源](#影视源)
+- [电视直播源](#电视直播源)
+- [iptv相关库汇集](#iptv相关库汇集)
+- [鼓励一下](#鼓励一下)
+- [star历史曲线](#star-history)
+
+---------------------------------------------------------------------
+## 安装包:  
+[返回目录](#contents)  
+
+来自https://github.com/o0HalfLife0o/TVBoxOSC/releases
+
+--------------------------------------------------------------
+
+## 影视源：  
+[返回目录](#contents)  
+
+（来自https://raw.liucn.cc/box/    https://gitcode.net/axutongxue/backup/-/wikis/TVBox ）简单明了的长期更新TVBox视频源地址（排名不分先后）
+
+> - https://raw.kkgithub.com/zongru666/myIPTV/main/yingshi2024.json （本仓库源）
+> - http://175.178.251.183:6689/tv.txt  （来自https://github.com/yuanzl77/IPTV ）
+> - http://我不是.肥猫.live (肥猫)
+> - http://pandown.pro/tvbox/tvbox.json （巧儿）
+> - 饭太硬：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fan.json
+> - 蜂蜜：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fongmi.json
+> - ~星云（打开页面获取）：https://moil.cc/10.html~
+> - 巧技：https://agit.ai/relax/adcc/raw/branch/master/tvbox.json
+> - 道长：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/XYQTVBox/drpy_js/drjs_config.json
+> - 俊于：http://home.jundie.top:81/top98.json
+> - 春盈天下：https://wds.ecsxs.com/230989.json
+> - 巧儿：http://pandown.pro/tvbox/tvbox.json
+> - 雷蒙（有电视直播）：https://lem.clem7.repl.co/N3RD/JN/tv.txt
+> - 湘雅晴APP线路：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/app.json
+> - 湘雅晴TV线路：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/tv.json
+> - 不良帅：https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8
+> - 胖虎：https://notabug.org/imbig66/tv-spider-man/raw/master/%E9%85%8D%E7%BD%AE/0801.json
+> - 高天流水：https://gcore.jsdelivr.net/gh/gaotianliuyun/gao@master/js.json
+> - 南风：https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json
+> - 唐僧影视（TV）：https://gitcode.net/ygbh66/test/-/raw/master/tsys.txt
+> - 月光宝盒（TV）：https://gitcode.net/ygbh66/test/-/raw/master/bhzb.txt
+> - https://ghproxy.com/raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json （FongMi）__不推荐__
+> - http://home.jundie.top:81/top98.json （俊哥）__不推荐__
+> - ~https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json~
+> - ~http://drpy.site/js1 （小雅）~
+> - ~https://tvbox.cainisi.cf （菜妮丝）~
+> - ~https://神器每日推送.tk/pz.json （神器）~
+> - ~http://itvbox.cc/tvbox/云星日记/1.m3u8 （云星）~
+> - 多仓版视频源（影视仓、EasyBox可用／直接复制下方冒号后的链接添加）：
+> > - liu673cn：https://raw.liucn.cc/box/dm.txt
+> > - 应用多多：https://jihulab.com/duomv/apps/-/raw/main/duo.json
+> > - 小胡软件多仓：https://agit.ai/xiaohu/tvbox/raw/branch/main/live.txt
+> > - Pandwon：http://pandown.pro/tvbox/tvbox.json
+> > - Dxawi：https://dxawi.github.io/0/0.json
+
+## 电视直播源：  
+[返回目录](#contents)  
+
+> - https://raw.kkgithub.com/zongru666/myIPTV/main/iptv2024.m3u (本仓库源代理地址)
+> - http://175.178.251.183:6689/live.m3u  （来自https://github.com/yuanzl77/IPTV）
+> - https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u (原仓库源代理地址)
+> - https://m3u.ibert.me/j_home.m3u (来自https://github.com/HerbertHe/iptv-sources)
+> - https://mirror.ghproxy.com/raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8 （来自https://github.com/joevess/IPTV ）
+> - https://ghproxy.net/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u （来自https://github.com/cymz6/AutoIPTV-Hotel ）
+> - 📺 自动扫描直播源 IPTV6/IPTV4：  
+> > *有ipv6环境的强烈推荐这个IPTV6源，高速稳定*  
+> > *一般都有ipv6的，但需要在路由器开启，以华为路由器为例，打开路由器管理页面，找到网络设置，里面就有个开启/关闭ipv6，开启即可*  
+> > **[ipv6测试](http://ipv6-test.ch/)** 
+> > ![路由器开启ipv6](https://github.com/user-attachments/assets/3ef66c4a-4fb4-42ad-b3f6-3bd1afafe61f)  
+> > <table style='width:100%; border-collapse: collapse; text-align: center;'>
+> >   <tr>
+> >     <th>名称</th>
+> >     <th>网址</th>
+> >     <th>快速复制</th>
+> >   </tr>
+> >   <tr>
+> >     <td>TXT 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv6.txt'>https://live.zhoujie218.top/tv/iptv6.txt</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv6.txt')'>快速复制</button></td>
+> >   </tr>
+> >   <tr>
+> >     <td>M3U 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv6.m3u'>https://live.zhoujie218.top/tv/iptv6.m3u</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv6.m3u')'>快速复制</button></td>
+> >   </tr>
+> >   <tr>
+> >     <td>M3U 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv4.m3u'>https://live.zhoujie218.top/tv/iptv4.m3u</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv4.m3u')'>快速复制</button></td>
+> >   </tr>
+> >   <tr>
+> >     <td>TXT 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv4.txt'>https://live.zhoujie218.top/tv/iptv4.txt</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv4.txt')'>快速复制</button></td>
+> >   </tr>
+> > </table>
+
+------------------------------------------------------------------------------------
+## iptv相关库汇集：  
+[返回目录](#contents)  
+ 
+（感谢各位仓库作者的收集）
+
+> * https://github.com/HerbertHe/iptv-sources
+> * https://github.com/jisoypub/iptv
+> * https://github.com/joevess/IPTV
+> * https://github.com/vbskycn/iptv
+> * https://github.com/ssili126/tv
+> * https://github.com/yuanzl77/IPTV  
+------------------------------------------------------------------------------------
+*发现tvbox直接使用github上原仓库里的raw链接作为直播源的话，会提示“直播地址网络请求失败”
+![直播地址网络请求失败](https://github.com/user-attachments/assets/e6858620-1abc-455d-894d-b3e47c2c0be2)
+解决方法：改为github镜像站的地址就好了，如https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u ，使用的是kkgithub镜像站的*
+
+------------------------------------------------------------------------------------
+## 鼓励一下
+[返回目录](#contents)  
+如果这个项目有帮到你，希望你能动用你的发财小手支持一下  
+_你的鼓励是这个项目继续更新的最大动力_  
+
+。">
+<meta property="og:title" content="TVBox自用影视源与iptv源">
+<meta property="og:description" content="[https://zongru666.github.io/myIPTV/](https://zongru666.github.io/myIPTV/)
+
+# TVBox自用影视源与iptv源  
+自用，侵删  
+
+## Contents
+- [TVbox安装包（安卓apk）](#安装包)
+- [影视源](#影视源)
+- [电视直播源](#电视直播源)
+- [iptv相关库汇集](#iptv相关库汇集)
+- [鼓励一下](#鼓励一下)
+- [star历史曲线](#star-history)
+
+---------------------------------------------------------------------
+## 安装包:  
+[返回目录](#contents)  
+
+来自https://github.com/o0HalfLife0o/TVBoxOSC/releases
+
+--------------------------------------------------------------
+
+## 影视源：  
+[返回目录](#contents)  
+
+（来自https://raw.liucn.cc/box/    https://gitcode.net/axutongxue/backup/-/wikis/TVBox ）简单明了的长期更新TVBox视频源地址（排名不分先后）
+
+> - https://raw.kkgithub.com/zongru666/myIPTV/main/yingshi2024.json （本仓库源）
+> - http://175.178.251.183:6689/tv.txt  （来自https://github.com/yuanzl77/IPTV ）
+> - http://我不是.肥猫.live (肥猫)
+> - http://pandown.pro/tvbox/tvbox.json （巧儿）
+> - 饭太硬：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fan.json
+> - 蜂蜜：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fongmi.json
+> - ~星云（打开页面获取）：https://moil.cc/10.html~
+> - 巧技：https://agit.ai/relax/adcc/raw/branch/master/tvbox.json
+> - 道长：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/XYQTVBox/drpy_js/drjs_config.json
+> - 俊于：http://home.jundie.top:81/top98.json
+> - 春盈天下：https://wds.ecsxs.com/230989.json
+> - 巧儿：http://pandown.pro/tvbox/tvbox.json
+> - 雷蒙（有电视直播）：https://lem.clem7.repl.co/N3RD/JN/tv.txt
+> - 湘雅晴APP线路：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/app.json
+> - 湘雅晴TV线路：https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/tv.json
+> - 不良帅：https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8
+> - 胖虎：https://notabug.org/imbig66/tv-spider-man/raw/master/%E9%85%8D%E7%BD%AE/0801.json
+> - 高天流水：https://gcore.jsdelivr.net/gh/gaotianliuyun/gao@master/js.json
+> - 南风：https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json
+> - 唐僧影视（TV）：https://gitcode.net/ygbh66/test/-/raw/master/tsys.txt
+> - 月光宝盒（TV）：https://gitcode.net/ygbh66/test/-/raw/master/bhzb.txt
+> - https://ghproxy.com/raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json （FongMi）__不推荐__
+> - http://home.jundie.top:81/top98.json （俊哥）__不推荐__
+> - ~https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json~
+> - ~http://drpy.site/js1 （小雅）~
+> - ~https://tvbox.cainisi.cf （菜妮丝）~
+> - ~https://神器每日推送.tk/pz.json （神器）~
+> - ~http://itvbox.cc/tvbox/云星日记/1.m3u8 （云星）~
+> - 多仓版视频源（影视仓、EasyBox可用／直接复制下方冒号后的链接添加）：
+> > - liu673cn：https://raw.liucn.cc/box/dm.txt
+> > - 应用多多：https://jihulab.com/duomv/apps/-/raw/main/duo.json
+> > - 小胡软件多仓：https://agit.ai/xiaohu/tvbox/raw/branch/main/live.txt
+> > - Pandwon：http://pandown.pro/tvbox/tvbox.json
+> > - Dxawi：https://dxawi.github.io/0/0.json
+
+## 电视直播源：  
+[返回目录](#contents)  
+
+> - https://raw.kkgithub.com/zongru666/myIPTV/main/iptv2024.m3u (本仓库源代理地址)
+> - http://175.178.251.183:6689/live.m3u  （来自https://github.com/yuanzl77/IPTV）
+> - https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u (原仓库源代理地址)
+> - https://m3u.ibert.me/j_home.m3u (来自https://github.com/HerbertHe/iptv-sources)
+> - https://mirror.ghproxy.com/raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8 （来自https://github.com/joevess/IPTV ）
+> - https://ghproxy.net/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u （来自https://github.com/cymz6/AutoIPTV-Hotel ）
+> - 📺 自动扫描直播源 IPTV6/IPTV4：  
+> > *有ipv6环境的强烈推荐这个IPTV6源，高速稳定*  
+> > *一般都有ipv6的，但需要在路由器开启，以华为路由器为例，打开路由器管理页面，找到网络设置，里面就有个开启/关闭ipv6，开启即可*  
+> > **[ipv6测试](http://ipv6-test.ch/)** 
+> > ![路由器开启ipv6](https://github.com/user-attachments/assets/3ef66c4a-4fb4-42ad-b3f6-3bd1afafe61f)  
+> > <table style='width:100%; border-collapse: collapse; text-align: center;'>
+> >   <tr>
+> >     <th>名称</th>
+> >     <th>网址</th>
+> >     <th>快速复制</th>
+> >   </tr>
+> >   <tr>
+> >     <td>TXT 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv6.txt'>https://live.zhoujie218.top/tv/iptv6.txt</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv6.txt')'>快速复制</button></td>
+> >   </tr>
+> >   <tr>
+> >     <td>M3U 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv6.m3u'>https://live.zhoujie218.top/tv/iptv6.m3u</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv6.m3u')'>快速复制</button></td>
+> >   </tr>
+> >   <tr>
+> >     <td>M3U 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv4.m3u'>https://live.zhoujie218.top/tv/iptv4.m3u</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv4.m3u')'>快速复制</button></td>
+> >   </tr>
+> >   <tr>
+> >     <td>TXT 格式直播源</td>
+> >     <td><a href='https://live.zhoujie218.top/tv/iptv4.txt'>https://live.zhoujie218.top/tv/iptv4.txt</a></td>
+> >     <td><button onclick='copyToClipboard('https://live.zhoujie218.top/tv/iptv4.txt')'>快速复制</button></td>
+> >   </tr>
+> > </table>
+
+------------------------------------------------------------------------------------
+## iptv相关库汇集：  
+[返回目录](#contents)  
+ 
+（感谢各位仓库作者的收集）
+
+> * https://github.com/HerbertHe/iptv-sources
+> * https://github.com/jisoypub/iptv
+> * https://github.com/joevess/IPTV
+> * https://github.com/vbskycn/iptv
+> * https://github.com/ssili126/tv
+> * https://github.com/yuanzl77/IPTV  
+------------------------------------------------------------------------------------
+*发现tvbox直接使用github上原仓库里的raw链接作为直播源的话，会提示“直播地址网络请求失败”
+![直播地址网络请求失败](https://github.com/user-attachments/assets/e6858620-1abc-455d-894d-b3e47c2c0be2)
+解决方法：改为github镜像站的地址就好了，如https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u ，使用的是kkgithub镜像站的*
+
+------------------------------------------------------------------------------------
+## 鼓励一下
+[返回目录](#contents)  
+如果这个项目有帮到你，希望你能动用你的发财小手支持一下  
+_你的鼓励是这个项目继续更新的最大动力_  
+
+。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://134688.xyz/post/81.html">
+<meta property="og:image" content="https://cdn.jsdelivr.net/gh/Meekdai/meekdai.github.io/logo64.jpg">
+<title>TVBox自用影视源与iptv源</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">TVBox自用影视源与iptv源</h1>
+<div class="title-right">
+    <a href="https://134688.xyz" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/xxjssyouk/xxjssyouk.github.io/issues/81" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><p><a href="https://zongru666.github.io/myIPTV/" rel="nofollow">https://zongru666.github.io/myIPTV/</a></p>
+<h1>TVBox自用影视源与iptv源</h1>
+<p>自用，侵删</p>
+<h2>Contents</h2>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E5%8C%85">TVbox安装包（安卓apk）</a></li>
+<li><a href="#%E5%BD%B1%E8%A7%86%E6%BA%90">影视源</a></li>
+<li><a href="#%E7%94%B5%E8%A7%86%E7%9B%B4%E6%92%AD%E6%BA%90">电视直播源</a></li>
+<li><a href="#iptv%E7%9B%B8%E5%85%B3%E5%BA%93%E6%B1%87%E9%9B%86">iptv相关库汇集</a></li>
+<li><a href="#%E9%BC%93%E5%8A%B1%E4%B8%80%E4%B8%8B">鼓励一下</a></li>
+<li><a href="#star-history">star历史曲线</a></li>
+</ul>
+<hr>
+<h2>安装包:</h2>
+<p><a href="#contents">返回目录</a></p>
+<p>来自<a href="https://github.com/o0HalfLife0o/TVBoxOSC/releases">https://github.com/o0HalfLife0o/TVBoxOSC/releases</a></p>
+<hr>
+<h2>影视源：</h2>
+<p><a href="#contents">返回目录</a></p>
+<p>（来自<a href="https://raw.liucn.cc/box/" rel="nofollow">https://raw.liucn.cc/box/</a>    <a href="https://gitcode.net/axutongxue/backup/-/wikis/TVBox" rel="nofollow">https://gitcode.net/axutongxue/backup/-/wikis/TVBox</a> ）简单明了的长期更新TVBox视频源地址（排名不分先后）</p>
+<blockquote>
+<ul>
+<li><a href="https://raw.kkgithub.com/zongru666/myIPTV/main/yingshi2024.json" rel="nofollow">https://raw.kkgithub.com/zongru666/myIPTV/main/yingshi2024.json</a> （本仓库源）</li>
+<li><a href="http://175.178.251.183:6689/tv.txt" rel="nofollow">http://175.178.251.183:6689/tv.txt</a>  （来自<a href="https://github.com/yuanzl77/IPTV">https://github.com/yuanzl77/IPTV</a> ）</li>
+<li><a href="http://%E6%88%91%E4%B8%8D%E6%98%AF.%E8%82%A5%E7%8C%AB.live" rel="nofollow">http://我不是.肥猫.live</a> (肥猫)</li>
+<li><a href="http://pandown.pro/tvbox/tvbox.json" rel="nofollow">http://pandown.pro/tvbox/tvbox.json</a> （巧儿）</li>
+<li>饭太硬：<a href="https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fan.json" rel="nofollow">https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fan.json</a></li>
+<li>蜂蜜：<a href="https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fongmi.json" rel="nofollow">https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/fongmi.json</a></li>
+<li><del>星云（打开页面获取）：<a href="https://moil.cc/10.html" rel="nofollow">https://moil.cc/10.html</a></del></li>
+<li>巧技：<a href="https://agit.ai/relax/adcc/raw/branch/master/tvbox.json" rel="nofollow">https://agit.ai/relax/adcc/raw/branch/master/tvbox.json</a></li>
+<li>道长：<a href="https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/XYQTVBox/drpy_js/drjs_config.json" rel="nofollow">https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/XYQTVBox/drpy_js/drjs_config.json</a></li>
+<li>俊于：<a href="http://home.jundie.top:81/top98.json" rel="nofollow">http://home.jundie.top:81/top98.json</a></li>
+<li>春盈天下：<a href="https://wds.ecsxs.com/230989.json" rel="nofollow">https://wds.ecsxs.com/230989.json</a></li>
+<li>巧儿：<a href="http://pandown.pro/tvbox/tvbox.json" rel="nofollow">http://pandown.pro/tvbox/tvbox.json</a></li>
+<li>雷蒙（有电视直播）：<a href="https://lem.clem7.repl.co/N3RD/JN/tv.txt" rel="nofollow">https://lem.clem7.repl.co/N3RD/JN/tv.txt</a></li>
+<li>湘雅晴APP线路：<a href="https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/app.json" rel="nofollow">https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/app.json</a></li>
+<li>湘雅晴TV线路：<a href="https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/tv.json" rel="nofollow">https://cdn.jsdelivr.net/gh/qirenzhidao/tvbox18@main/tv.json</a></li>
+<li>不良帅：<a href="https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8" rel="nofollow">https://notabug.org/qizhen15800/My9394/raw/master/ProfessionalEdition.m3u8</a></li>
+<li>胖虎：<a href="https://notabug.org/imbig66/tv-spider-man/raw/master/%E9%85%8D%E7%BD%AE/0801.json" rel="nofollow">https://notabug.org/imbig66/tv-spider-man/raw/master/%E9%85%8D%E7%BD%AE/0801.json</a></li>
+<li>高天流水：<a href="https://gcore.jsdelivr.net/gh/gaotianliuyun/gao@master/js.json" rel="nofollow">https://gcore.jsdelivr.net/gh/gaotianliuyun/gao@master/js.json</a></li>
+<li>南风：<a href="https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json" rel="nofollow">https://agit.ai/Yoursmile7/TVBox/raw/branch/master/XC.json</a></li>
+<li>唐僧影视（TV）：<a href="https://gitcode.net/ygbh66/test/-/raw/master/tsys.txt" rel="nofollow">https://gitcode.net/ygbh66/test/-/raw/master/tsys.txt</a></li>
+<li>月光宝盒（TV）：<a href="https://gitcode.net/ygbh66/test/-/raw/master/bhzb.txt" rel="nofollow">https://gitcode.net/ygbh66/test/-/raw/master/bhzb.txt</a></li>
+<li><a href="https://ghproxy.com/raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json" rel="nofollow">https://ghproxy.com/raw.githubusercontent.com/FongMi/CatVodSpider/main/json/config.json</a> （FongMi）<strong>不推荐</strong></li>
+<li><a href="http://home.jundie.top:81/top98.json" rel="nofollow">http://home.jundie.top:81/top98.json</a> （俊哥）<strong>不推荐</strong></li>
+<li><del><a href="https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json" rel="nofollow">https://cdn.jsdelivr.net/gh/liu673cn/box@main/m.json</a></del></li>
+<li><del><a href="http://drpy.site/js1" rel="nofollow">http://drpy.site/js1</a> （小雅）</del></li>
+<li><del><a href="https://tvbox.cainisi.cf" rel="nofollow">https://tvbox.cainisi.cf</a> （菜妮丝）</del></li>
+<li><del><a href="https://%E7%A5%9E%E5%99%A8%E6%AF%8F%E6%97%A5%E6%8E%A8%E9%80%81.tk/pz.json" rel="nofollow">https://神器每日推送.tk/pz.json</a> （神器）</del></li>
+<li><del><a href="http://itvbox.cc/tvbox/%E4%BA%91%E6%98%9F%E6%97%A5%E8%AE%B0/1.m3u8" rel="nofollow">http://itvbox.cc/tvbox/云星日记/1.m3u8</a> （云星）</del></li>
+<li>多仓版视频源（影视仓、EasyBox可用／直接复制下方冒号后的链接添加）：</li>
+</ul>
+<blockquote>
+<ul>
+<li>liu673cn：<a href="https://raw.liucn.cc/box/dm.txt" rel="nofollow">https://raw.liucn.cc/box/dm.txt</a></li>
+<li>应用多多：<a href="https://jihulab.com/duomv/apps/-/raw/main/duo.json" rel="nofollow">https://jihulab.com/duomv/apps/-/raw/main/duo.json</a></li>
+<li>小胡软件多仓：<a href="https://agit.ai/xiaohu/tvbox/raw/branch/main/live.txt" rel="nofollow">https://agit.ai/xiaohu/tvbox/raw/branch/main/live.txt</a></li>
+<li>Pandwon：<a href="http://pandown.pro/tvbox/tvbox.json" rel="nofollow">http://pandown.pro/tvbox/tvbox.json</a></li>
+<li>Dxawi：<a href="https://dxawi.github.io/0/0.json" rel="nofollow">https://dxawi.github.io/0/0.json</a></li>
+</ul>
+</blockquote>
+</blockquote>
+<h2>电视直播源：</h2>
+<p><a href="#contents">返回目录</a></p>
+<blockquote>
+<ul>
+<li><a href="https://raw.kkgithub.com/zongru666/myIPTV/main/iptv2024.m3u" rel="nofollow">https://raw.kkgithub.com/zongru666/myIPTV/main/iptv2024.m3u</a> (本仓库源代理地址)</li>
+<li><a href="http://175.178.251.183:6689/live.m3u" rel="nofollow">http://175.178.251.183:6689/live.m3u</a>  （来自<a href="https://github.com/yuanzl77/IPTV%EF%BC%89">https://github.com/yuanzl77/IPTV）</a></li>
+<li><a href="https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u" rel="nofollow">https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u</a> (原仓库源代理地址)</li>
+<li><a href="https://m3u.ibert.me/j_home.m3u" rel="nofollow">https://m3u.ibert.me/j_home.m3u</a> (来自<a href="https://github.com/HerbertHe/iptv-sources">https://github.com/HerbertHe/iptv-sources</a>)</li>
+<li><a href="https://mirror.ghproxy.com/raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8" rel="nofollow">https://mirror.ghproxy.com/raw.githubusercontent.com/joevess/IPTV/main/sources/iptv_sources.m3u8</a> （来自<a href="https://github.com/joevess/IPTV">https://github.com/joevess/IPTV</a> ）</li>
+<li><a href="https://ghproxy.net/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u" rel="nofollow">https://ghproxy.net/https://raw.githubusercontent.com/cymz6/AutoIPTV-Hotel/main/lives.m3u</a> （来自<a href="https://github.com/cymz6/AutoIPTV-Hotel">https://github.com/cymz6/AutoIPTV-Hotel</a> ）</li>
+<li>📺 自动扫描直播源 IPTV6/IPTV4：</li>
+</ul>
+<blockquote>
+<p><em>有ipv6环境的强烈推荐这个IPTV6源，高速稳定</em><br>
+<em>一般都有ipv6的，但需要在路由器开启，以华为路由器为例，打开路由器管理页面，找到网络设置，里面就有个开启/关闭ipv6，开启即可</em><br>
+<strong><a href="http://ipv6-test.ch/" rel="nofollow">ipv6测试</a></strong><br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/3ef66c4a-4fb4-42ad-b3f6-3bd1afafe61f"><img src="https://github.com/user-attachments/assets/3ef66c4a-4fb4-42ad-b3f6-3bd1afafe61f" alt="路由器开启ipv6" style="max-width: 100%;"></a></p>
+<markdown-accessiblity-table><table role="table">
+  <tbody><tr>
+    <th>名称</th>
+    <th>网址</th>
+    <th>快速复制</th>
+  </tr>
+  <tr>
+    <td>TXT 格式直播源</td>
+    <td><a href="https://live.zhoujie218.top/tv/iptv6.txt" rel="nofollow">https://live.zhoujie218.top/tv/iptv6.txt</a></td>
+    <td>快速复制</td>
+  </tr>
+  <tr>
+    <td>M3U 格式直播源</td>
+    <td><a href="https://live.zhoujie218.top/tv/iptv6.m3u" rel="nofollow">https://live.zhoujie218.top/tv/iptv6.m3u</a></td>
+    <td>快速复制</td>
+  </tr>
+  <tr>
+    <td>M3U 格式直播源</td>
+    <td><a href="https://live.zhoujie218.top/tv/iptv4.m3u" rel="nofollow">https://live.zhoujie218.top/tv/iptv4.m3u</a></td>
+    <td>快速复制</td>
+  </tr>
+  <tr>
+    <td>TXT 格式直播源</td>
+    <td><a href="https://live.zhoujie218.top/tv/iptv4.txt" rel="nofollow">https://live.zhoujie218.top/tv/iptv4.txt</a></td>
+    <td>快速复制</td>
+  </tr>
+</tbody></table></markdown-accessiblity-table>
+</blockquote>
+</blockquote>
+<hr>
+<h2>iptv相关库汇集：</h2>
+<p><a href="#contents">返回目录</a></p>
+<p>（感谢各位仓库作者的收集）</p>
+<blockquote>
+<ul>
+<li><a href="https://github.com/HerbertHe/iptv-sources">https://github.com/HerbertHe/iptv-sources</a></li>
+<li><a href="https://github.com/jisoypub/iptv">https://github.com/jisoypub/iptv</a></li>
+<li><a href="https://github.com/joevess/IPTV">https://github.com/joevess/IPTV</a></li>
+<li><a href="https://github.com/vbskycn/iptv">https://github.com/vbskycn/iptv</a></li>
+<li><a href="https://github.com/ssili126/tv">https://github.com/ssili126/tv</a></li>
+<li><a href="https://github.com/yuanzl77/IPTV">https://github.com/yuanzl77/IPTV</a></li>
+</ul>
+</blockquote>
+<hr>
+<p><em>发现tvbox直接使用github上原仓库里的raw链接作为直播源的话，会提示“直播地址网络请求失败”<br>
+<a target="_blank" rel="noopener noreferrer" href="https://github.com/user-attachments/assets/e6858620-1abc-455d-894d-b3e47c2c0be2"><img src="https://github.com/user-attachments/assets/e6858620-1abc-455d-894d-b3e47c2c0be2" alt="直播地址网络请求失败" style="max-width: 100%;"></a><br>
+解决方法：改为github镜像站的地址就好了，如<a href="https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u" rel="nofollow">https://raw.kkgithub.com/jisoypub/iptv/master/cn_all.m3u</a> ，使用的是kkgithub镜像站的</em></p>
+<hr>
+<h2>鼓励一下</h2>
+<p><a href="#contents">返回目录</a><br>
+如果这个项目有帮到你，希望你能动用你的发财小手支持一下<br>
+<em>你的鼓励是这个项目继续更新的最大动力</em></p></div>
+<div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
+
+<button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
+<div class="comments" id="comments"></div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://134688.xyz">记录、回忆</a></div>
+<div id="footer2">
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("02/16/2024"!=""){
+    var startSite=new Date("02/16/2024");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行"+diffDay+"天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek main https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+function openComments(){
+    cm=document.getElementById("comments");
+    cmButton=document.getElementById("cmButton");
+    cmButton.innerHTML="loading";
+    span=document.createElement("span");
+    span.setAttribute("class","AnimatedEllipsis");
+    cmButton.appendChild(span);
+
+    script=document.createElement("script");
+    script.setAttribute("src","https://utteranc.es/client.js");
+    script.setAttribute("repo","xxjssyouk/xxjssyouk.github.io");
+    script.setAttribute("issue-term","title");
+    
+    if(localStorage.getItem("meek_theme")=="dark"){script.setAttribute("theme","dark-blue");}
+    else if(localStorage.getItem("meek_theme")=="light") {script.setAttribute("theme","github-light");}
+    else{script.setAttribute("theme","preferred-color-scheme");}
+    
+    script.setAttribute("crossorigin","anonymous");
+    script.setAttribute("async","");
+    cm.appendChild(script);
+
+    int=self.setInterval("iFrameLoading()",200);
+}
+
+function iFrameLoading(){
+    var utterances=document.getElementsByClassName('utterances');
+    if(utterances.length==1){
+        if(utterances[0].style.height!=""){
+            utterancesLoad=1;
+            int=window.clearInterval(int);
+            document.getElementById("cmButton").style.display="none";
+            console.log("utterances Load OK");
+        }
+    }
+}
+
+
+
+</script>
+<script src='https://blog.meekdai.com/assets/GmeekTOC.js'></script>
+
+</html>
