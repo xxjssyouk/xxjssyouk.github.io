@@ -1,5 +1,51 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Fri, 17 Jan 2025 15:47:57 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>我听的有声书</title><link>https://134688.xyz/post/97.html</link><description>`Gmeek-html&lt;iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=86 src='//music.163.com/outchain/player?type=3&amp;id=3070684168&amp;auto=0&amp;height=66'&gt;&lt;/iframe&gt;`
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Mon, 20 Jan 2025 17:23:43 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>播放源</title><link>https://134688.xyz/post/98.html</link><description> ## 点播
+ #### 导航网站
+ * 饭太硬: [https://www.饭太硬.com/](https://www.xn--sss604efuw.com/)
+ * 摸鱼儿: [https://www.摸鱼儿.com/](https://www.xn--v4q818bf34b.com/)
+ * 欧歌仓库: http://tv.nxog.top/
+ * 黎歌の主页：[黎歌の主页](https://lige.chat/)
+ * 肥猫接口: [https://肥猫.live/](https://xn--z7x900a.live/)
+ * 源仓库：[源仓库](https://www.yckceo.com/index/applist/tvbox.html)
+ * 电视盒子源表: https://tvbox.youdu.fan/
+ * 云涧鹤：[云涧鹤](https://flowus.cn/share/cb13f47f-f1fa-41d4-bcc6-e184bcc64f56)
+   
+   * [ 云涧鹤🌤️](https://www.i46.top/jsjc/29.html)
+ * 电视盒子源表[源](https://cyuan.netlify.app/)
+ * 聚玩盒子[ 聚玩盒子](https://www.juwanhezi.com/other/jsonlist)
+   -影視TV [影視TV](https://xhdwc.tk/)
+   `https://xhdwc.tk/0`
+ 
+ #### 点播源
+ 1. `https://gitee.com/hailin886/fty/raw/master/tvbox/aishang.json`
+ 2. `https://testingcf.jsdelivr.net/gh/Ftindy/IPTV-URL@main/`
+ 3. `https://raw.liucn.cc/box/m.json`
+ 4. `https://raw.githubusercontent.com/gaotianliuyun/gao/master/0825.json`  ➡天高流云
+ 5. `http://xhww.fun/小米/DEMO.json`  ➡小米
+ 6. `https://mirror.ghproxy.com/https://raw.githubusercontent.com/supermeguo/BoxRes/main/Myuse/catcr.json` ⛔
+ 7. `http://www.wya6.cn/tv/yc.json`
+ 8. `https://box.woniuxs.link/TV/asjx.json`
+ 9. `https://mirror.ghproxy.com/https://raw.githubusercontent.com/qirenzhidao/tvbox18/main/app.json
+ 10. `http://ok321.top/ok
+ 11. `https://raw.githubusercontent.com/gaotianliuyun/gao/master/js.json `
+ 
+ #### 点播仓库加速
+ 1. https://testingcf.jsdelivr.net/gh/wwb521/live@main/
+    
+    1. 源地址：`https://github.com/wwb521/live` ➡更新高质量电视直播源
+ 2. https://testingcf.jsdelivr.net/gh/gaotianliuyun/gao@master/
+    
+    1. 源地址：`https://github.com/gaotianliuyun/gao`  ➡FongMi影视和tvbox配置文件
+ 3. https://testingcf.jsdelivr.net/gh/cqmzgg/tv@main/
+ 4. https://testingcf.jsdelivr.net/gh/cqmzgg/Tvbox@main/
+    
+    1. 源地址：
+ 5. https://testingcf.jsdelivr.net/gh/hujingguang/ChinaIPTV@main/
+    
+    1. 源地址：`https://github.com/hujingguang/ChinaIPTV` ➡中国电视直播源 cnTV m3u（实时更新,长期有效）
+ 6. https://testingcf.jsdelivr.net/gh/hinsky/IPv6TV@main/
+    
+    1. 源地址：`https://github.com/hinsky/IPv6TV`  ➡搜集的ipv6电视直播源，自用。</description><guid isPermaLink="true">https://134688.xyz/post/98.html</guid><pubDate>Mon, 20 Jan 2025 17:23:16 +0000</pubDate></item><item><title>我听的有声书</title><link>https://134688.xyz/post/97.html</link><description>`Gmeek-html&lt;iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=86 src='//music.163.com/outchain/player?type=3&amp;id=3070684168&amp;auto=0&amp;height=66'&gt;&lt;/iframe&gt;`
 
 其实我更喜欢看小说.奈何到眼睛高度近视，实在是没法看，就只有听了。</description><guid isPermaLink="true">https://134688.xyz/post/97.html</guid><pubDate>Fri, 17 Jan 2025 15:47:33 +0000</pubDate></item><item><title>文章插入html标签</title><link>https://134688.xyz/post/96.html</link><description>`Gmeek-html&lt;iframe frameborder='no' border='0' marginwidth='0' marginheight='0' width=330 height=86 src='//music.163.com/outchain/player?type=3&amp;id=3070684168&amp;auto=0&amp;height=66'&gt;&lt;/iframe&gt;`
 
