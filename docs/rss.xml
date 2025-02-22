@@ -1,5 +1,14 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Thu, 20 Feb 2025 15:59:43 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>Notion 导航站：一个使用 Notion 作为数据库后端的个人导航网站项目</title><link>https://134688.xyz/post/103.html</link><description>Notion 导航站：一个使用 Notion 作为数据库后端的个人导航网站项目。</description><guid isPermaLink="true">https://134688.xyz/post/103.html</guid><pubDate>Thu, 20 Feb 2025 15:59:20 +0000</pubDate></item><item><title>DeepSeek 实用集成</title><link>https://134688.xyz/post/102.html</link><description>⭐ [DeepSeek 实用集成](https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/README_cn.md)
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Sat, 22 Feb 2025 03:07:06 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>一款以Telegram作为储存的文件外链系统</title><link>https://134688.xyz/post/104.html</link><description>![Alt Text](https://tgims.vercel.app/d/BQACAgUAAxkDAAMNZ7k--IP_i1H_06xOiF5Cbher1WoAAsISAAJpn9FVdgZGQcwZk8E2BA)
+
+tgState
+==
+
+一款以Telegram作为储存的文件外链系统
+
+不限制文件大小和格式
+
+可以作为telegram图床，也可以作为telegram网盘使用。</description><guid isPermaLink="true">https://134688.xyz/post/104.html</guid><pubDate>Sat, 22 Feb 2025 03:06:42 +0000</pubDate></item><item><title>Notion 导航站：一个使用 Notion 作为数据库后端的个人导航网站项目</title><link>https://134688.xyz/post/103.html</link><description>Notion 导航站：一个使用 Notion 作为数据库后端的个人导航网站项目。</description><guid isPermaLink="true">https://134688.xyz/post/103.html</guid><pubDate>Thu, 20 Feb 2025 15:59:20 +0000</pubDate></item><item><title>DeepSeek 实用集成</title><link>https://134688.xyz/post/102.html</link><description>⭐ [DeepSeek 实用集成](https://github.com/deepseek-ai/awesome-deepseek-integration/blob/main/README_cn.md)
 
 该项目由 DeepSeek 官方发布，整理了众多可接入 DeepSeek 模型的各类软件
 
