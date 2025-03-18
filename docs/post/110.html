@@ -253,25 +253,25 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <p>在项目根目录新增<code class="notranslate">wrangler.jsonc</code>文件.内容如下:(自己替换下面的变量)</p>
 </li>
 </ol>
-<div class="highlight highlight-source-js"><pre class="notranslate"><span class="pl-kos">{</span>
-  <span class="pl-s">"name"</span>: <span class="pl-s">"项目名称"</span><span class="pl-kos">,</span>
-  <span class="pl-s">"compatibility_date"</span>: <span class="pl-s">"2025-03-04"</span><span class="pl-kos">,</span>
-  <span class="pl-s">"pages_build_output_dir"</span>: <span class="pl-s">"./dist"</span><span class="pl-kos">,</span>
-  <span class="pl-s">"compatibility_flags"</span>: <span class="pl-kos">[</span>
-    <span class="pl-s">"nodejs_compat"</span>
-  <span class="pl-kos">]</span><span class="pl-kos">,</span>
-  <span class="pl-s">"vars"</span>: <span class="pl-kos">{</span>
-    <span class="pl-s">"JWT_SECRET"</span>: <span class="pl-s">"jwt密钥"</span><span class="pl-kos">,</span>
-    <span class="pl-s">"GRAVATAR_BASE_URL"</span>: <span class="pl-s">"https://cdn.sep.cc/avatar/"</span>
-  <span class="pl-kos">}</span><span class="pl-kos">,</span>
-  <span class="pl-s">"d1_databases"</span>: <span class="pl-kos">[</span>
-     <span class="pl-kos">{</span>
-       <span class="pl-s">"binding"</span>: <span class="pl-s">"DB"</span><span class="pl-kos">,</span>
-       <span class="pl-s">"database_name"</span>: <span class="pl-s">"d1数据库名称"</span><span class="pl-kos">,</span>
-       <span class="pl-s">"database_id"</span>: <span class="pl-s">"d1数据库ID"</span>
-     <span class="pl-kos">}</span>
-  <span class="pl-kos">]</span>
-<span class="pl-kos">}</span></pre></div>
+<div class="highlight highlight-source-json-comments"><pre class="notranslate">{
+  <span class="pl-s">"name"</span>: <span class="pl-s"><span class="pl-pds">"</span>项目名称<span class="pl-pds">"</span></span>,
+  <span class="pl-s">"compatibility_date"</span>: <span class="pl-s"><span class="pl-pds">"</span>2025-03-04<span class="pl-pds">"</span></span>,
+  <span class="pl-s">"pages_build_output_dir"</span>: <span class="pl-s"><span class="pl-pds">"</span>./dist<span class="pl-pds">"</span></span>,
+  <span class="pl-s">"compatibility_flags"</span>: [
+    <span class="pl-s"><span class="pl-pds">"</span>nodejs_compat<span class="pl-pds">"</span></span>
+  ],
+  <span class="pl-s">"vars"</span>: {
+    <span class="pl-s">"JWT_SECRET"</span>: <span class="pl-s"><span class="pl-pds">"</span>jwt密钥<span class="pl-pds">"</span></span>,
+    <span class="pl-s">"GRAVATAR_BASE_URL"</span>: <span class="pl-s"><span class="pl-pds">"</span>https://cdn.sep.cc/avatar/<span class="pl-pds">"</span></span>
+  },
+  <span class="pl-s">"d1_databases"</span>: [
+     {
+       <span class="pl-s">"binding"</span>: <span class="pl-s"><span class="pl-pds">"</span>DB<span class="pl-pds">"</span></span>,
+       <span class="pl-s">"database_name"</span>: <span class="pl-s"><span class="pl-pds">"</span>d1数据库名称<span class="pl-pds">"</span></span>,
+       <span class="pl-s">"database_id"</span>: <span class="pl-s"><span class="pl-pds">"</span>d1数据库ID<span class="pl-pds">"</span></span>
+     }
+  ]
+}</pre></div>
 <p><a href="https://jwt-keys.21no.de/" rel="nofollow">jwt 密钥生成器</a> 加密算法选<code class="notranslate">HS256</code>,密钥长度选<code class="notranslate">32</code>.</p>
 <ol start="3">
 <li>在项目根目录运行</li>
