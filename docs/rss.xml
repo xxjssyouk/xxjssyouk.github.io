@@ -1,5 +1,58 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Tue, 25 Mar 2025 14:45:31 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>一键部署 Hexo 到 Vecrcel</title><link>https://134688.xyz/post/112.html</link><description>不用配置本机环境，直接一键部署 Hexo 到 Vecrcel  
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Wed, 26 Mar 2025 08:36:36 +0000</lastBuildDate><managingEditor>记录、回忆</managingEditor><ttl>60</ttl><webMaster>记录、回忆</webMaster><item><title>GPT-4o原生图像生成上线，P图、生图也就一嘴的事</title><link>https://134688.xyz/post/113.html</link><description>## 当P图、生图变得像说话一样简单
+
+![](https://pic.imgdd.cc/item/67e3bc5f218de299ca98585e.png)
+
+### 一、创作门槛的革命性降低
+
+- 传统方式：
+  - 专业软件学习成本高
+  - 操作流程复杂（图层/蒙版/通道）
+  - 试错成本大，修改耗时
+
+- AI方式：
+  - '生成赛博朋克风格的城市夜景'
+  - '把这张照片变成水彩画效果'
+  - '人物表情调整得更开心些'
+
+### 二、交互方式的本质改变
+
+传统流程：
+创意 → 学习技术 → 实现 → 修改 → 完成
+
+AI创作流程：
+创意 → 语言描述 → 即时生成 → 语言调整 → 完成
+
+优势特点：
+- 支持多轮对话修改
+- 实时反馈结果
+- 零技术基础要求
+
+### 三、全民创作时代来临
+
+应用场景：
+- 家长：快速生成儿童故事插图
+- 教师：制作课件配图
+- 电商：生成商品场景图
+- 自媒体：创作封面图片
+
+### 四、新环境下的新思考
+
+关注问题：
+- 版权归属界定
+- 原创性保证
+- 审美标准变化
+- 设计师定位转变
+
+### 五、未来发展趋势
+
+演进方向：
+- 图像→视频→3D模型生成
+- 多模态融合创作
+- 个性化风格学习
+- 实时协作创作
+
+&gt; '创作权利正在从专业人士向全民转移' —— 用户实测感受。</description><guid isPermaLink="true">https://134688.xyz/post/113.html</guid><pubDate>Wed, 26 Mar 2025 08:36:15 +0000</pubDate></item><item><title>一键部署 Hexo 到 Vecrcel</title><link>https://134688.xyz/post/112.html</link><description>不用配置本机环境，直接一键部署 Hexo 到 Vecrcel  
 
 仓库地址：&lt;https://github.com/EvanNotFound/vercel-hexo-template&gt;
 
