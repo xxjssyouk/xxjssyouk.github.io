@@ -19,20 +19,20 @@
  ```
  
  ## 效果
- [!NOTE]
- Useful information that users should know, even when skimming content.
+> [!NOTE]
+> Useful information that users should know, even when skimming content.
 
- [!TIP]
- Helpful advice for doing things better or more easily.
+> [!TIP]
+> Helpful advice for doing things better or more easily.
 
- [!IMPORTANT]
- Key information users need to know to achieve their goal.
+> [!IMPORTANT]
+> Key information users need to know to achieve their goal.
 
- [!WARNING]
- Urgent info that needs immediate user attention to avoid problems.
+> [!WARNING]
+> Urgent info that needs immediate user attention to avoid problems.
 
- [!CAUTION]
- Advises about risks or negative outcomes of certain actions.
+> [!CAUTION]
+> Advises about risks or negative outcomes of certain actions.
  
  ## 其他
  由于[primer.style](https://primer.style/css)没有对`alerts`标签进行颜色处理，所以在Gmeek的`v2.19`版本添加了颜色的支持，效果还是不错的，同时切换亮暗主题也有对应的变化。
