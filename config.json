@@ -5,7 +5,7 @@
     "homeUrl":"https://134688.xyz",
     "avatarUrl":"https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png",
     "singlePage":["link","about"],
-    "GMEEK_VERSION":"last"
+    "GMEEK_VERSION":"last",
     "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>",
     "email":"jssoo@163.com",
     "startSite":"02/16/2024",
@@ -16,5 +16,5 @@
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "i18n":"CN",
     "nightTheme":"dark_colorblind",
-    "bottomText":"❤️ 文章随意转载❤️",
+    "bottomText":"❤️ 文章随意转载❤️"
 }
