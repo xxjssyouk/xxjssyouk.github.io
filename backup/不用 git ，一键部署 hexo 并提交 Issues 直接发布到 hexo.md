@@ -1,3 +1,7 @@
+前提条件：
+
+- 1 github账号
+- 2 Vercel账号
 
 Deploy your own Hexo project with Vercel.
 
