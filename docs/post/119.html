@@ -743,7 +743,96 @@ jobs:
 <li>每个 issue 会生成一个独立的 Markdown 文件，文件名包含日期和 issue 编号</li>
 <li>前置信息包含了 issue 的原始链接，方便追溯</li>
 </ol>
-<p>这个方案完全在云端运行，不需要任何本地环境。</p></div>
+<p>这个方案完全在云端运行，不需要任何本地环境。</p>
+<p>今天更换主题解决了<br>
+在<br>
+.github/workflows/<br>
+添加.thenr.yml</p>
+<pre class="notranslate"><code class="notranslate">name: Auto Install Diaspora Theme
+on:
+ workflow_dispatch:  # 允许手动触发
+ push:
+   branches: [ main ]
+   paths:
+     - '_config.yml'  # 配置文件变更时触发
+permissions:
+ contents: write
+jobs:
+ install-diaspora:
+   runs-on: ubuntu-latest
+   steps:
+     # 1. 准备环境
+     - uses: actions/checkout@v4
+       with:
+         fetch-depth: 0
+     
+     - name: Setup Node.js
+       uses: actions/setup-node@v3
+       with:
+         node-version: 18  # Diaspora兼容版本
+         cache: 'npm'
+
+     # 2. 安装Hexo基础环境
+     - name: Install Hexo
+       run: |
+         npm install -g hexo-cli
+         npm install
+
+     # 3. 安装Diaspora主题
+     - name: Install Diaspora Theme
+       run: |
+         rm -rf themes/diaspora
+         git clone --depth 1 https://github.com/Fechin/hexo-theme-diaspora.git themes/diaspora
+         rm -rf themes/diaspora/.git
+         
+         # 安装主题依赖（Diaspora可能需要）
+         if [ -f "themes/diaspora/package.json" ]; then
+           cd themes/diaspora
+           npm install --production
+           cd ../..
+         fi
+
+     # 4. 配置处理
+     - name: Configure Theme
+       run: |
+         # 使用sed确保兼容性
+         sed -i 's/^theme:.*/theme: diaspora/' _config.yml
+         
+         # 复制主题配置模板
+         if [ ! -f "_config.diaspora.yml" ]; then
+           if [ -f "themes/diaspora/_config.yml" ]; then
+             cp themes/diaspora/_config.yml _config.diaspora.yml
+             echo "::notice::Created _config.diaspora.yml"
+           else
+             echo "::warning::No theme config found"
+           fi
+         fi
+
+     # 5. 安装必要插件
+     - name: Install Required Plugins
+       run: |
+         npm install hexo-renderer-jade hexo-renderer-less --save
+
+     # 6. 测试生成
+     - name: Generate Site
+       run: |
+         hexo clean
+         hexo generate
+
+     # 7. 提交变更
+     - name: Commit Changes
+       run: |
+         git config --global user.name "GitHub Actions"
+         git config --global user.email "actions@github.com"
+         git add .
+         if [ -n "$(git status --porcelain)" ]; then
+           git commit -m "chore: Installed diaspora theme [skip ci]"
+           git push
+         else
+           echo "No changes to commit"
+         fi
+</code></pre>
+<p>把其中的主题链接换成你喜欢的主题链接，然后在 Actions 运行即可。</p></div>
 <div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
