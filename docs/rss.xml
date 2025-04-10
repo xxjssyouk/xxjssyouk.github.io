@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆、碎碎念</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆、碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Thu, 10 Apr 2025 14:21:43 +0000</lastBuildDate><managingEditor>记录、回忆、碎碎念</managingEditor><ttl>60</ttl><webMaster>记录、回忆、碎碎念</webMaster><item><title>不用 git ，一键部署 hexo 并提交 Issues 直接发布到 hexo</title><link>https://134688.xyz/post/119.html</link><description>前提条件：
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>记录、回忆、碎碎念</title><link>https://134688.xyz</link><description>回忆是一种生活态度，仅此而已。</description><copyright>记录、回忆、碎碎念</copyright><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png</url><title>avatar</title><link>https://134688.xyz</link></image><lastBuildDate>Thu, 10 Apr 2025 14:59:03 +0000</lastBuildDate><managingEditor>记录、回忆、碎碎念</managingEditor><ttl>60</ttl><webMaster>记录、回忆、碎碎念</webMaster><item><title>Telegram 联合 俄罗斯政府 推出 A+ 认证</title><link>https://134688.xyz/post/121.html</link><description>Telegram 联合 俄罗斯政府 推出 A+ 认证
+
+В Telegram начала действовать система маркировки каналов, владельцы которых прошли регистрацию в РКН. Для получения отметки А⁺ нужно воспользоваться ботом @Trustchannelbot. Инструкция понятная, весь процесс занимает несколько минут, и в результате отметка появляется слева от названия канала.
+
+Теперь у пользователей Telegram появилась возможность быстро и наглядно убедиться, какие каналы можно репостить, а у рекламодателей – где размещаться. Думаю, со временем эта отметка станет еще и понятным маркером ответственного отношения автора канала к своему контенту.‌‌
+翻译： ru-zh-CN
+在电报中，频道标签系统开始运行，其所有者在RKN中注册。</description><guid isPermaLink="true">https://134688.xyz/post/121.html</guid><pubDate>Thu, 10 Apr 2025 14:58:32 +0000</pubDate></item><item><title>不用 git ，一键部署 hexo 并提交 Issues 直接发布到 hexo</title><link>https://134688.xyz/post/119.html</link><description>前提条件：
 
 - 1 github账号
 - 2 Vercel账号
