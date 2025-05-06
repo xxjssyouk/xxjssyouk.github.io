@@ -4,7 +4,7 @@
 
 dpdns.org
 
-xx.us
+xx.kg
 
 qzz.io
 
