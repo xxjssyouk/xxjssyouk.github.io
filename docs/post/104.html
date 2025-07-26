@@ -35,7 +35,7 @@ tgState
 <meta property="og:url" content="https://134688.xyz/post/104.html">
 <meta property="og:image" content="https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png">
 <title>一款以Telegram作为储存的文件外链系统</title>
-
+<link href="//unpkg.com/@wooorm/starry-night@2.1.1/style/both.css" rel="stylesheet" />
 
 
 </head>
@@ -195,8 +195,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 <pre class="notranslate"><code class="notranslate">/api?pass=123
 </code></pre>
 <p>返回示例:</p>
-<pre lang="json" class="notranslate"><code class="notranslate">{"code": 1, "message": "/d/xxx","url":"xxx"}
-</code></pre>
+<div class="highlight highlight-source-json"><pre class="notranslate">{<span class="pl-ent">"code"</span>: <span class="pl-c1">1</span>, <span class="pl-ent">"message"</span>: <span class="pl-s"><span class="pl-pds">"</span>/d/xxx<span class="pl-pds">"</span></span>,<span class="pl-ent">"url"</span>:<span class="pl-s"><span class="pl-pds">"</span>xxx<span class="pl-pds">"</span></span>}</pre></div>
 <p>json格式的<code class="notranslate">url</code>默认返回tgState的<code class="notranslate">url</code>参数+访问路径，如果只得到了路径则需要自行设置<code class="notranslate">url</code>参数</p>
 <p>picgo-plugin-web-uploader填写说明：</p>
 <p>POST参数名：<code class="notranslate">image</code></p>
