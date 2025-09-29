@@ -2,7 +2,7 @@
 
 🤖 BSS：基于贝叶斯算法的 Telegram广告拦截机器人
 
-🔗：GitHub | Wiki | Bot
+[github](https://github.com/ramsayleung/bayes_spam_sniper)
 
 👉 Features
 
