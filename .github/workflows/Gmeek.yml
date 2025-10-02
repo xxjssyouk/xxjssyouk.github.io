@@ -1,4 +1,4 @@
-name: build Gmeek
+name: Build Gmeek Blog
 
 on:
   workflow_dispatch:
@@ -9,7 +9,7 @@ on:
     
 jobs:
   build:
-    name: Generate blog
+    name: Generate Blog
     runs-on: ubuntu-24.04
     if: ${{ github.event.repository.owner.id == github.event.sender.id || github.event_name == 'schedule' }}
     permissions: write-all
@@ -21,20 +21,89 @@ jobs:
         id: pages
         uses: actions/configure-pages@v4
 
-      - name: Get config.json
+      - name: Check config.json
         run: |
-          echo "====== check config.josn file ======"
-          cat config.json
-          echo "====== check config.josn end  ======"
-          sudo apt-get install jq
+          echo "====== Check config.json file ======"
+          if [ -f "config.json" ]; then
+            cat config.json
+          else
+            echo "config.json not found!"
+            exit 1
+          fi
+          echo "====== Check config.json end ======"
+          sudo apt-get install -y jq
 
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: 3.8
+          python-version: "3.8"
 
-      - name: Clone source code
+      - name: Clone Gmeek source code
         run: |
+          GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
+          echo "Using Gmeek version: $GMEEK_VERSION"
+          git clone https://github.com/xxjssyouk/Gmeek.git /opt/Gmeek
+          cd /opt/Gmeek/
+          if [ "$GMEEK_VERSION" = "last" ]; then
+            lastTag=$(git describe --tags `git rev-list --tags --max-count=1`)
+            echo "Using latest tag: $lastTag"
+            git checkout $lastTag
+          else
+            echo "Using specified version: $GMEEK_VERSION"
+            git checkout $GMEEK_VERSION
+          fi
+
+      - name: Install Python dependencies
+        run: |
+          pip install --upgrade pip
+          pip install -r /opt/Gmeek/requirements.txt
+
+      - name: Generate static site
+        run: |
+          # Copy current repository files to Gmeek directory
+          cp -r ./* /opt/Gmeek/
+          cd /opt/Gmeek/
+          # Run Gmeek with your G_T secret
+          python Gmeek.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          # Copy generated files back
+          cp -a /opt/Gmeek/docs ${{ github.workspace }} 
+          cp -a /opt/Gmeek/backup ${{ github.workspace }} 
+          cp /opt/Gmeek/blogBase.json ${{ github.workspace }}
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "$(jq -r ".email" config.json)"
+          git config --local user.name "${{ github.repository_owner }}"
+          git add .
+          git commit -a -m '🎉 Auto update by Gmeek Action' || echo "No changes to commit"
+          git push || echo "Nothing to push"
+          sleep 3
+
+      - name: Upload to GitHub Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'docs/.'
+          
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-24.04
+    needs: build
+    permissions:
+      pages: write
+      id-token: write
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+        
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4        run: |
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
           git clone https://github.com/xxjssyouk/Gmeek.git /opt/Gmeek;
           cd /opt/Gmeek/
