@@ -983,17 +983,5 @@ blog.blogBase["postListJson"]["labelColorDict"]=blog.labelColorDict
 
 docListFile=open(blog.root_dir+"postList.json","w")
 docListFile.write(json.dumps(blog.blogBase["postListJson"]))
-docListFile.close()
-
-if os.environ.get('GITHUB_EVENT_NAME')!='schedule':
-    print("====== update readme file ======")
-    workspace_path = os.environ.get('GITHUB_WORKSPACE')
-    readme=readme+"### :page_facing_up: [%d](%s/tag.html) \r\n" % (len(blog.blogBase["postListJson"])-1,blog.blogBase["homeUrl"])
-    readme=readme+"### :speech_balloon: %d \r\n" % commentNumSum
-    readme=readme+"### :hibiscus: %d \r\n" % wordCount
-    readme=readme+"### :alarm_clock: %s \r\n" % datetime.datetime.now(blog.TZ).strftime('%Y-%m-%d %H:%M:%S')
-    readme=readme+"### Powered by :heart: [Gmeek](https://github.com/xxjssyouk/Gmeek)\r\n"
-    readmeFile=open(workspace_path+"/README.md","w")
-    readmeFile.write(readme)
-    readmeFile.close()
+docListFile.close()  
 ######################################################################################
