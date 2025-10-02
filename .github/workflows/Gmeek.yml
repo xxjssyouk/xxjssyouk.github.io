@@ -103,7 +103,7 @@ jobs:
         
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v4        run: |
+        uses: actions/deploy-pages@v4        run:|
           GMEEK_VERSION=$(jq -r ".GMEEK_VERSION" config.json)
           git clone https://github.com/xxjssyouk/Gmeek.git /opt/Gmeek;
           cd /opt/Gmeek/
