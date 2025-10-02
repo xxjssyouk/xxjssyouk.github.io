@@ -979,9 +979,15 @@ for i in blog.blogBase["postListJson"]:
         wordCount=wordCount+blog.blogBase["postListJson"][i]["wordCount"]
         del blog.blogBase["postListJson"][i]["wordCount"]
 
+
+
 blog.blogBase["postListJson"]["labelColorDict"]=blog.labelColorDict
 
 docListFile=open(blog.root_dir+"postList.json","w")
 docListFile.write(json.dumps(blog.blogBase["postListJson"]))
 docListFile.close()  
 ######################################################################################
+######################################################################################
+print("====== update readme file ======")
+readme = ""  # 添加这行来初始化 readme 变量
+readme=readme+"### :page_facing_up: [%d](%s/tag.html) \r\n" % (len(blog.blogBase["postListJson"])-1,blog.blogBase["homeUrl"])
