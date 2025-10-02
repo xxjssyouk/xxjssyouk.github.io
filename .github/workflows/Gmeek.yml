@@ -59,6 +59,8 @@ jobs:
         run: |
           git config --local user.email "$(jq -r ".email" config.json)"
           git config --local user.name "${{ github.repository_owner }}"
+          # 从暂存区移除 README.md（如果被修改了）
+          git restore --staged README.md || echo "README.md not staged"
           git add .
           git commit -a -m '🎉auto update by Gmeek action' || echo "nothing to commit"
           git push || echo "nothing to push"
