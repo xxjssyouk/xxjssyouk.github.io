@@ -18,6 +18,7 @@
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "i18n":"CN",
     "nightTheme":"dark_colorblind",
-    "script":"<script src='https://xxjssyouk.github.com/plugins/articletoc.js'></script>",
+    "script":"<script src='https://xxjssyouk.github.io/plugins/articletoc.js'></script>",
+    "script":"<script src='https://xxjssyouk.github.io/plugins/GmeekBaseTheme.css'></script>",
     "bottomText":"❤️ 文章随意转载❤️"
 }
