@@ -84,7 +84,7 @@ body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;
 具体情况表现为WARP客户端无法连接，即使优选同一个 IP，不访问时一切正常（ICMP、UDP 通顺），一旦尝试通过 WebSocket 进行连接，很快就会遇到连接超时。这可能是因为 GFW 使用深度包检测（DPI）技术来识别和阻断特定类型的流量。同时Cloudflare CDN、AWS CloudFront CDN、Gcore CDN、Fastly CDN都出现了类似的情况，但是本次阻断并非单纯针对 WireGuard 协议进行的封锁，因为一些使用 WireGuard 的 VPN 应用还可以正常工作。</p>
 <p>PS：以上内容全部基于IPv4进行测试，IPv6受影响较小，并由于各地区运营商封锁程度不一样并不一定具有参考价值。（严重省份：河北、江苏、福建，新疆和部分其他SNI 白名单地区）阻塞不仅可以发生在端口443上，还可以发生在从1到65535的所有端口上。</p>
 <p>声明：以上所有内容基于网络整理以及通过本人部分实验得出结果，如有错误，请各位群友及时指正。</p></div>
-<div style="font-size:small;margin-top:8px;float:right;">❤️ 文章随意转载❤️</div>
+<div style="font-size:small;margin-top:8px;float:right;">🍀🍀 文章来自网络随意转载 🍀🍀</div>
 
 <button class="btn btn-block" type="button" onclick="openComments()" id="cmButton">评论</button>
 <div class="comments" id="comments"></div>
@@ -189,6 +189,6 @@ function iFrameLoading(){
 
 
 </script>
-<script src='https://134688.xyz/Gmeek/plugins/GmeekBaseTheme.css'></script>
+<script src='https://134688.xyz/Gmeek/plugins/articletoc.js'></script>
 
 </html>
