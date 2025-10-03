@@ -1,7 +1,7 @@
 {
     "title":"记录、回忆",
     "displayTitle":"记录、回忆",
-    "subTitle":"回忆是一种生活态度，仅此而已。",
+    "subTitle":"Memory is merely an attitude toward life。",
     "homeUrl":"https://134688.xyz",
     "avatarUrl":"https://pic.imgdb.cn/item/6606aa8b9f345e8d03cf45e3.png",
     "singlePage":["link","music","about"],
@@ -19,6 +19,5 @@
     "i18n":"CN",
     "nightTheme":"dark_colorblind",
     "script":"<script src='https://134688.xyz/Gmeek/plugins/articletoc.js'></script>",
-    "script":"<script src='https://134688.xyz/Gmeek/plugins/GmeekBaseTheme.css'></script>",
-    "bottomText":"❤️ 文章随意转载❤️"
+    "bottomText":"🍀🍀 文章来自网络随意转载 🍀🍀"
 }
