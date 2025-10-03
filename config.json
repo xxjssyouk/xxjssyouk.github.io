@@ -18,6 +18,6 @@
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "i18n":"CN",
     "nightTheme":"dark_colorblind",
-    "script":"<script src='https://xxjssyouk.github.com/plugins/lightbox.js'></script>",
+    "script":"<script src='https://xxjssyouk.github.com/plugins/articletoc.js'></script>",
     "bottomText":"❤️ 文章随意转载❤️"
 }
