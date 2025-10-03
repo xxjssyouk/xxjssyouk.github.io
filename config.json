@@ -9,7 +9,7 @@
     "exlink":{"music":"https://music.163.com/m/playlist?id=51779987&creatorId=53729259"},
     "GMEEK_VERSION":"last",
     "script":"<script src='https://134688.xyz/Gmeek/plugins/lightbox.js'></script>",
-    "allHead": "<link rel='preconnect' href='https://134688.xyz'><link rel='stylesheet' href='https://134688.xyz/plugins/GmeekBaseTheme.css'>",
+    "allHead": "<link rel='preconnect' href='https://134688.xyz'><link rel='stylesheet' href='https://134688.xyz/Gmeek/plugins/GmeekBaseTheme.css'>",
     "email":"jssoo@163.com",
     "startSite":"02/16/2024",
     "urlMode":"issue",
