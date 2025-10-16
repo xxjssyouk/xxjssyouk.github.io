@@ -1,40 +1,90 @@
-name: Process GitHub Issues
+name: Update README with Issues
 
 on:
-  workflow_dispatch:
+  schedule:
+    - cron: '0 */6 * * *'  # 每6小时运行一次
+  workflow_dispatch:  # 手动触发
 
 jobs:
-  process-issues:
+  update-readme:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm install axios
 
-      - name: Process GitHub Issues
+      - name: Update README with issues
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
         run: |
-          # 创建 Node.js 脚本来处理 API 请求
-          cat > process_issues.js << 'EOF'
+          node -e "
+          const fs = require('fs');
           const axios = require('axios');
 
-          const token = process.env.GITHUB_TOKEN;
-          const repo = process.env.REPO;
-
-          async function getIssues() {
+          (async () => {
             try {
-              const response = await axios.get(
-                `https://api.github.com/repos/${repo}/issues?state=open`,
+              console.log('Fetching issues from repository:', process.env.REPO);
+              
+              const res = await axios.get(
+                \`https://api.github.com/repos/\${process.env.REPO}/issues?state=open\`,
                 {
+                  headers: { 
+                    Authorization: \`token \${process.env.GITHUB_TOKEN}\`,
+                    Accept: 'application/vnd.github.v3+json'
+                  }
+                }
+              );
+
+              console.log('Found', res.data.length, 'open issues');
+
+              // 过滤掉 pull requests（GitHub API 中 issues 和 PRs 在一起）
+              const issues = res.data.filter(item => !item.pull_request);
+              
+              let issuesContent = '';
+              if (issues.length > 0) {
+                issuesContent = issues.map(issue => 
+                  \`- [#\${issue.number}](\${issue.html_url}) \${issue.title}\`
+                ).join('\\n');
+              } else {
+                issuesContent = 'No open issues at the moment.';
+              }
+
+              let readme = fs.readFileSync('README.md', 'utf8');
+
+              // 更新 README 中的 issues 部分
+              readme = readme.replace(
+                /<!-- ISSUES-START -->[\\s\\S]*?<!-- ISSUES-END -->/,
+                \`<!-- ISSUES-START -->\\n\${issuesContent}\\n<!-- ISSUES-END -->\`
+              );
+
+              fs.writeFileSync('README.md', readme);
+              console.log('README.md updated successfully with', issues.length, 'issues.');
+              
+            } catch (error) {
+              console.error('Error:', error.response?.data || error.message);
+              process.exit(1);
+            }
+          })();
+          "
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git diff --staged --quiet || git commit -m "Update README with latest issues"
+          git push                {
                   headers: {
                     Authorization: `token ${token}`,
                     Accept: 'application/vnd.github.v3+json'
