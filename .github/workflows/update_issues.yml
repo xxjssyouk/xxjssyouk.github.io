@@ -1,0 +1,34 @@
+name: Update Issues in README
+
+on:
+  schedule:
+    - cron: '0 * * * *'  # 每小时更新一次
+  workflow_dispatch:    # 可以手动触发
+  issues:
+    types: [opened, closed, edited]  # Issues 创建、关闭或编辑时触发
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 20
+
+    - name: Update README with issues
+      run: |
+        npm install axios
+        node .github/scripts/update_issues.js
+
+    - name: Commit and Push changes
+      run: |
+        git config --local user.name "github-actions[bot]"
+        git config --local user.email "github-actions[bot]@users.noreply.github.com"
+        git add README.md
+        git commit -m "Update issues in README" || echo "No changes to commit"
+        git push
