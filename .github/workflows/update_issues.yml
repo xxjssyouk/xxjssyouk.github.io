@@ -1,107 +1,26 @@
-name: Update README with Issues
-
-on:
-  schedule:
-    - cron: '0 */6 * * *'  # 每6小时运行一次
-  workflow_dispatch:  # 手动触发
-
-jobs:
-  update-readme:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm install axios
-
-      - name: Update README with issues
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          REPO: ${{ github.repository }}
-        run: |
-          node -e "
-          const fs = require('fs');
-          const axios = require('axios');
-
-          (async () => {
-            try {
-              console.log('Fetching issues from repository:', process.env.REPO);
-              
-              const res = await axios.get(
-                \`https://api.github.com/repos/\${process.env.REPO}/issues?state=open\`,
-                {
-                  headers: { 
-                    Authorization: \`token \${process.env.GITHUB_TOKEN}\`,
-                    Accept: 'application/vnd.github.v3+json'
-                  }
-                }
-              );
-
-              console.log('Found', res.data.length, 'open issues');
-
-              // 过滤掉 pull requests（GitHub API 中 issues 和 PRs 在一起）
-              const issues = res.data.filter(item => !item.pull_request);
-              
-              let issuesContent = '';
-              if (issues.length > 0) {
-                issuesContent = issues.map(issue => 
-                  \`- [#\${issue.number}](\${issue.html_url}) \${issue.title}\`
-                ).join('\\n');
-              } else {
-                issuesContent = 'No open issues at the moment.';
-              }
-
-              let readme = fs.readFileSync('README.md', 'utf8');
-
-              // 更新 README 中的 issues 部分
-              readme = readme.replace(
-                /<!-- ISSUES-START -->[\\s\\S]*?<!-- ISSUES-END -->/,
-                \`<!-- ISSUES-START -->\\n\${issuesContent}\\n<!-- ISSUES-END -->\`
-              );
-
-              fs.writeFileSync('README.md', readme);
-              console.log('README.md updated successfully with', issues.length, 'issues.');
-              
-            } catch (error) {
-              console.error('Error:', error.response?.data || error.message);
-              process.exit(1);
-            }
-          })();
-          "
-
-      - name: Commit and push changes
-        run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add README.md
-          git diff --staged --quiet || git commit -m "Update README with latest issues"
-          git push                {
-                  headers: {
-                    Authorization: `token ${token}`,
-                    Accept: 'application/vnd.github.v3+json'
-                  }
-                }
-              );
-
-              response.data.forEach(issue => {
-                console.log(`- [#${issue.number}](${issue.html_url}) ${issue.title}`);
-              });
-            } catch (error) {
-              console.error('Error fetching issues:', error.message);
-              process.exit(1);
-            }
-          }
-
-          getIssues();
-          EOF
-
-          node process_issues.js
+  name: Update README with issues using curl and jq
+  env:
+    GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    REPO: ${{ github.repository }}
+  run: |
+    # 安装 jq (JSON 处理器)
+    sudo apt-get update && sudo apt-get install -y jq
+    
+    # 获取 issues 并更新 README
+    issues=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+      "https://api.github.com/repos/$REPO/issues?state=open" | \
+      jq -r '.[] | select(.pull_request == null) | "- [#\(.number)](\(.html_url)) \(.title)"')
+    
+    if [ -z "$issues" ]; then
+      issues="No open issues at the moment."
+    fi
+    
+    # 更新 README.md
+    awk -v issues="$issues" '
+      /<!-- ISSUES-START -->/ { print; print issues; skip=1 }
+      /<!-- ISSUES-END -->/ { skip=0 }
+      !skip { print }
+      skip && /<!-- ISSUES-END -->/ { print; skip=0 }
+    ' README.md > README.tmp && mv README.tmp README.md
+    
+    echo "README updated successfully"
