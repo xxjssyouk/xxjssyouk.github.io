@@ -12,3 +12,27 @@ My personal blog([About Me](https://xxjssyouk.github.io/2025/02/16/8_About/)) us
 ——查理·芒格
 
 #### 2.“我们没有希望，他们也没有希望，这就是希望。”
+
+
+## 当前开放的 Issues
+
+<!-- ISSUES-START -->
+<!-- ISSUES-END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
