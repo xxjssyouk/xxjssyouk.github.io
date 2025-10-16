@@ -14,10 +14,7 @@ My personal blog([About Me](https://xxjssyouk.github.io/2025/02/16/8_About/)) us
 #### 2.“我们没有希望，他们也没有希望，这就是希望。”
 
 
-#### 最近更新
 
-<!-- ISSUES-START -->
-<!-- ISSUES-END -->
 
 
 
