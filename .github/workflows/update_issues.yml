@@ -1,70 +1,57 @@
-name: Update Issues in README
+name: Process GitHub Issues
 
 on:
-  schedule:
-    - cron: '0 * * * *'  # 每小时更新一次
-  workflow_dispatch:    # 手动触发
-  issues:
-    types: [opened, closed, edited]  # Issues 创建/关闭/编辑触发
+  workflow_dispatch:
 
 jobs:
-  update-readme:
+  process-issues:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
 
-    - name: Update README with issues
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        REPO: ${{ github.repository }}
-      run: |
-        npm install axios
-        node -e "
-        const fs = require('fs');
-        const axios = require('axios');
-        (async () => {
-          try {
-            const res = await axios.get(`https://api.github.com/repos/${process.env.REPO}/issues?state=open`, {
-              headers: { Authorization: `token ${process.env.GITHUB_TOKEN}` }
-            });
-            const issues = res.data.map(issue => `- [#${issue.number}](${issue.html_url}) ${issue.title}`).join('\n');
-            let readme = fs.readFileSync('README.md', 'utf8');
-            const newReadme = readme.replace(
-              /<!-- ISSUES-START -->[\\s\\S]*<!-- ISSUES-END -->/,
-              `<!-- ISSUES-START -->\n${issues}\n<!-- ISSUES-END -->`
-            );
-            fs.writeFileSync('README.md', newReadme);
-            console.log('README.md updated with latest issues.');
-          } catch(e) { console.error(e); process.exit(1); }
-        })();
-        "
+      - name: Install dependencies
+        run: npm install axios
 
-    - name: Commit and Push changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add README.md
-        git commit -m "Update issues in README" || echo "No changes to commit"
-        git push
-              `<!-- ISSUES-START -->\n${issues}\n<!-- ISSUES-END -->`
-            );
-            fs.writeFileSync('README.md', newReadme);
-            console.log('README.md updated with latest issues.');
-          } catch(e) { console.error(e); process.exit(1); }
-        })();
-        "
+      - name: Process GitHub Issues
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          # 创建 Node.js 脚本来处理 API 请求
+          cat > process_issues.js << 'EOF'
+          const axios = require('axios');
 
-    - name: Commit and Push changes
-      run: |
-        git config --local user.name "github-actions[bot]"
-        git config --local user.email "github-actions[bot]@users.noreply.github.com"
-        git add README.md
-        git commit -m "Update issues in README" || echo "No changes to commit"
-        git push
+          const token = process.env.GITHUB_TOKEN;
+          const repo = process.env.REPO;
+
+          async function getIssues() {
+            try {
+              const response = await axios.get(
+                `https://api.github.com/repos/${repo}/issues?state=open`,
+                {
+                  headers: {
+                    Authorization: `token ${token}`,
+                    Accept: 'application/vnd.github.v3+json'
+                  }
+                }
+              );
+
+              response.data.forEach(issue => {
+                console.log(`- [#${issue.number}](${issue.html_url}) ${issue.title}`);
+              });
+            } catch (error) {
+              console.error('Error fetching issues:', error.message);
+              process.exit(1);
+            }
+          }
+
+          getIssues();
+          EOF
+
+          node process_issues.js
