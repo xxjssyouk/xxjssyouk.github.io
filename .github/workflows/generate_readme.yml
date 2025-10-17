@@ -32,15 +32,19 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: 3.8
-          cache: pip
-          cache-dependency-path: "requirements.txt"
 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           python -m venv venv
           source venv/bin/activate
-          pip install -r requirements.txt
+          # 如果确实有 requirements.txt，确保它在仓库根目录
+          if [ -f "requirements.txt" ]; then
+            pip install -r requirements.txt
+          else
+            echo "No requirements.txt found, installing default dependencies"
+            pip install requests python-dotenv
+          fi
 
       - name: Generate new md
         run: |
@@ -52,9 +56,19 @@ jobs:
             python main.py ${{ secrets.G_T }} ${{ github.repository }}
           fi
 
-      - name: Push README
+      - name: Configure Git
         run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git config --global user.name "GitHub Action"
+
+      - name: Check for changes
+        id: git-check
+        run: |
           git add BACKUP/*.md
-          git diff --staged --quiet || (git commit -a -m 'update new blog' && git push)
+          echo "changes=$(git diff --staged --quiet || echo 'true')" >> $GITHUB_OUTPUT
+
+      - name: Commit and push if changes
+        if: steps.git-check.outputs.changes == 'true'
+        run: |
+          git commit -m 'update new blog'
+          git push
