@@ -16,10 +16,18 @@ jobs:
   sync:
     name: Generate README
     runs-on: ubuntu-latest
-    if: github.repository_owner_id == github.event.issue.user.id || github.event_name == 'push'
+    if: |
+      github.event_name == 'workflow_dispatch' ||
+      github.event_name == 'push' ||
+      (github.event.issue && github.repository_owner_id == github.event.issue.user.id) ||
+      (github.event.comment && github.repository_owner_id == github.event.comment.user.id)
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -35,6 +43,21 @@ jobs:
           pip install -r requirements.txt
 
       - name: Generate new md
+        run: |
+          source venv/bin/activate
+          # 安全地处理可能不存在的 issue_number
+          if [ -n "${{ github.event.issue.number }}" ]; then
+            python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
+          else
+            python main.py ${{ secrets.G_T }} ${{ github.repository }}
+          fi
+
+      - name: Push README
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add BACKUP/*.md
+          git diff --staged --quiet || (git commit -a -m 'update new blog' && git push)      - name: Generate new md
         run: |
           source venv/bin/activate
           python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
