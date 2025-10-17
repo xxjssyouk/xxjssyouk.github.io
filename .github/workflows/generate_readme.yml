@@ -38,7 +38,6 @@ jobs:
           python -m pip install --upgrade pip
           python -m venv venv
           source venv/bin/activate
-          # 如果确实有 requirements.txt，确保它在仓库根目录
           if [ -f "requirements.txt" ]; then
             pip install -r requirements.txt
           else
@@ -49,26 +48,31 @@ jobs:
       - name: Generate new md
         run: |
           source venv/bin/activate
-          # 安全地处理可能不存在的 issue_number
           if [ -n "${{ github.event.issue.number }}" ]; then
             python main.py ${{ secrets.G_T }} ${{ github.repository }} --issue_number '${{ github.event.issue.number }}'
           else
             python main.py ${{ secrets.G_T }} ${{ github.repository }}
           fi
 
-      - name: Configure Git
+      - name: Check for changes
+        id: changes
         run: |
           git config --global user.email "action@github.com"
           git config --global user.name "GitHub Action"
-
-      - name: Check for changes
-        id: git-check
-        run: |
           git add BACKUP/*.md
-          echo "changes=$(git diff --staged --quiet || echo 'true')" >> $GITHUB_OUTPUT
+          # 检查是否有变化
+          if git diff --staged --quiet; then
+            echo "has_changes=false" >> $GITHUB_OUTPUT
+            echo "No changes to commit"
+          else
+            echo "has_changes=true" >> $GITHUB_OUTPUT
+            echo "Changes detected, will commit and push"
+          fi
 
-      - name: Commit and push if changes
-        if: steps.git-check.outputs.changes == 'true'
-        run: |
-          git commit -m 'update new blog'
-          git push
+      - name: Commit and Push
+        if: steps.changes.outputs.has_changes == 'true'
+        uses: actions-js/push@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          message: "update new blog"
+          branch: main
